@@ -4,8 +4,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-
-
 function Cashbook() {
     const [showModal, setShowModal] = useState(false);
     const [transactionType, setTransactionType] = useState('cashIn'); // Either 'cashIn' or 'cashOut'
@@ -96,9 +94,9 @@ function Cashbook() {
 
         const currentDate = new Date();
         const dateTime = currentDate.toLocaleString();
-        // console.log("Default date and time ", dateTime)
+        
         const selectedDateFormatted = new Date(selectedDate).toLocaleString();
-        //  console.log('Selected date and time ', selectedDateFormatted);
+        
         const newTransaction = {
             title,
             amount: parseFloat(amount),
@@ -107,25 +105,19 @@ function Cashbook() {
             image,
 
         };
-
         if (editTransactionIndex !== null) {
-
             // Update the transaction in the history
-
             const updatedHistory = history.map((transaction, index) =>
                 index === editTransactionIndex ? newTransaction : transaction
             );
             setHistory(updatedHistory);
-
             // Update totals
-
             const oldTransaction = history[editTransactionIndex];
             if (oldTransaction.type === 'cashIn') {
                 setTotalCashIn(totalCashIn - oldTransaction.amount + newTransaction.amount);
             } else {
                 setTotalCashOut(totalCashOut - oldTransaction.amount + newTransaction.amount);
             }
-
             toast.success("Transaction updated successfully!");
         } else {
             setHistory([newTransaction, ...history]);
@@ -290,9 +282,7 @@ function Cashbook() {
                     <p>Total Cash In: <span className='text-green-800'>₹{totalCashIn}</span> </p>
                     <p >Total Cash Out:<span className='text-red-600'>₹{totalCashOut}</span></p>
                 </div>
-
             </div>
-
             {showModal && (
                 <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center">
                     <div className="bg-white p-6 rounded shadow-lg w-11/12 sm:w-80 md:w-96 lg:w-1/2 xl:w-1/2">
