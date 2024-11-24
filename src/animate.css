@@ -1,0 +1,253 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    background-color: #f5f5f5;
+  }
+  
+  /* Container to center content */
+  .container {
+    width: 100%;
+    max-width: 1000px;  /* Limit max width to 1200px */
+    margin: 0 auto;     /* Center content horizontally */
+    padding: 0 20px;    /* Add some padding to the sides */
+  }
+  
+  /* Hero Section */
+ 
+  @keyframes gradient-animation {
+    0% { background: linear-gradient(135deg, #0a0a0a, #1e1e1e, #00ff99); }
+    50% { background: linear-gradient(135deg, #0a0a0a, #1e1e1e, #00cc99); }
+    100% { background: linear-gradient(135deg, #0a0a0a, #1e1e1e, #00ff99); }
+}
+
+.hero-section {
+    text-align: center;
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #0a0a0a, #1e1e1e, #00ff99);
+    color: whitesmoke;
+    
+    animation: gradient-animation 3s infinite alternate;
+}
+
+
+  
+  .hero-heading {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-subheading {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .cta-button {
+    background-color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    color: #ff4081;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #ff2366;
+  }
+  
+  /* Sections */
+  .section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .section-heading {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .services-container,
+  .pricing-container,
+  .testimonials-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .service-item,
+  .pricing-item,
+  .testimonial-item {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 1px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+  }
+  
+  .service-item h3,
+  .pricing-item h3,
+  .testimonial-item p {
+    margin-bottom: 10px;
+  }
+  
+  /* Contact Form */
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .contact-form button {
+    padding: 12px 25px;
+    border: none;
+    background-color: #ff4081;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 5px;
+  }
+  
+  .contact-form button:hover {
+    background-color: #ff2366;
+  }
+  
+  /* Add some spacing and margin for each section */
+  .section {
+    margin-bottom: 80px;
+  }
+  
+  /* RESPONSIVENESS */
+  
+  /* For screens larger than 1200px (Desktop screens) */
+  @media (min-width: 1200px) {
+    .hero-heading {
+      font-size: 5rem;  /* Increase font size for larger screens */
+    }
+  
+    .hero-subheading {
+      font-size: 2.5rem;
+    }
+  
+    .section-heading {
+      font-size: 3rem;
+    }
+  
+    .service-item, .pricing-item, .testimonial-item {
+      width: 320px; /* Make items a little wider for larger screens */
+    }
+  
+    .services-container,
+    .pricing-container,
+    .testimonials-container {
+      justify-content: space-evenly; /* Distribute items evenly */
+    }
+  }
+  
+  /* For screens larger than 768px and smaller than 1200px (Tablet to small Desktop) */
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .hero-heading {
+      font-size: 3.5rem;
+    }
+  
+    .hero-subheading {
+      font-size: 2rem;
+    }
+  
+    .section-heading {
+      font-size: 2.5rem;
+    }
+  
+    .service-item, .pricing-item, .testimonial-item {
+      width: 280px;
+    }
+  
+    .services-container,
+    .pricing-container,
+    .testimonials-container {
+      justify-content: space-between;
+    }
+  }
+  
+  /* For smaller screens (Mobile devices) */
+  @media (max-width: 768px) {
+    .hero-heading {
+      font-size: 2.5rem;
+    }
+  
+    .section-heading {
+      font-size: 2rem;
+    }
+  
+    .service-item, .pricing-item, .testimonial-item {
+      width: 100%;
+    }
+  
+    .services-container,
+    .pricing-container,
+    .testimonials-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .cta-button {
+      padding: 12px 24px;
+      font-size: 1.1rem;
+    }
+  
+    .contact-form button {
+      padding: 12px 24px;
+      font-size: 1rem;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+  /* Ensure titles break correctly */
+.break-words {
+  word-wrap: break-word; /* This makes long words wrap onto the next line */
+  word-break: break-word; /* Ensure that words will break in the middle if necessary */
+}
+
+/* Make the table responsive on mobile devices */
+@media (max-width: 768px) {
+  table {
+      width: 100%;
+      table-layout: fixed; /* Ensures that the table takes the available width */
+  }
+
+  th, td {
+      text-align: center;
+      padding: 8px;
+  }
+
+  /* Add line breaks for longer titles */
+  .break-words span {
+      display: block;
+      word-wrap: break-word;
+  }
+}
+
+
