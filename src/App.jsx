@@ -4,6 +4,7 @@ import Navbar from "./Navbar/Navbar";
 import Service from "./Service/Service";
 import Home from './Home/Home'
 import Cashbook from "./Home/Cashbook";
+import NotificationButton from "./components/Notification";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/service" element={<Service />} />
       </Routes>
+
+        
     </>
   );
 }
