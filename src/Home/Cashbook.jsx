@@ -35,8 +35,6 @@ function Cashbook() {
         localStorage.setItem('totalCashOut', totalCashOut.toString());
     }, [history, totalCashIn, totalCashOut]);
 
-
-
     const handleTitleInput = (e) => {
         setTittleError('');
         setTitle(e.target.value);
@@ -77,10 +75,8 @@ function Cashbook() {
     //     setAmount('');
     //     setImage(null);
     // };
-
-
+ 
     const handleAddTransaction = () => {
-
         setTittleError('');
         setAmountError('');
         if (title === "") {
@@ -91,19 +87,15 @@ function Cashbook() {
             setAmountError('Enter valid amount.');
             return;
         }
-
         const currentDate = new Date();
         const dateTime = currentDate.toLocaleString();
-        
         const selectedDateFormatted = new Date(selectedDate).toLocaleString();
-        
         const newTransaction = {
             title,
             amount: parseFloat(amount),
             type: transactionType,
             dateTime: selectedDateFormatted,
             image,
-
         };
         if (editTransactionIndex !== null) {
             // Update the transaction in the history
@@ -146,7 +138,7 @@ function Cashbook() {
         setEditTransactionIndex(index);  // Store the index of the transaction being edited
         setShowModal(true);  // Open the modal
     };
-
+    
     const handleDelete = () => {
         if (editTransactionIndex !== null) {
             const updatedHistory = history.filter((_, index) => index !== editTransactionIndex);
@@ -163,16 +155,15 @@ function Cashbook() {
         }
     };
 
-
     const handleCloseModel = () => {
         setAmountError('');
         setTittleError('');
         setShowModal(false)
     }
-
+    
     return (
         <>
-            <div className="mx-auto p-1 w-full sm:max-w-md md:max-w-lg lg:w-1/2 xl:w-1/2">
+            <div className="container  mx-auto p-1 w-full sm:max-w-md md:max-w-lg lg:w-1/2 xl:w-1/2">
                 <div className="mb-1 mt-1 bg-slate-50 rounded-lg shadow-md p-2">
                     <p className="text-md">Enable Backup</p>
                     <div className="flex items-center flex-row sm:flex-row space-x-2">
@@ -200,7 +191,7 @@ function Cashbook() {
                     </div>
 
                     <div className="mb-4">
-                        <div className="overflow-x-auto w-full"> {/* Ensure the table container takes full width */}
+                        <div className="overflow-x-auto w-full">
                             <div className="m-2 text-center mb-2">
                                 <div className="m-2 flex justify-evenly grid-cols-6 gap-6 text-center mb-2">
                                     <p className="ml-5">Title</p>
@@ -223,12 +214,13 @@ function Cashbook() {
                                 {/* Scrollable Table Body */}
 
                                 <div className="max-h-72 sm:max-h-[250px] md:max-h-[300px] lg:max-h-[400px] overflow-y-auto">
-                                    <table className="min-w-full table-auto">
-                                        <tbody>
+                                    <table className="min-w-full table-auto ">
+                                        <tbody className='m-0'>
                                             {history.map((transaction, index) => (
-                                                <tr key={index} className={`border-b ${index === 1 ? 'mt-4' : ''} shadow-lg`} onClick={() => handleEdit(index)}>
-                                                    <td className="px-4 py-2 break-words whitespace-normal overflow-hidden text-ellipsis">
-                                                        <span className="block">{transaction.title}</span>
+                                                
+                                                <tr key={index} className={` border-b ${index === 1 ? 'mt-4' : ''} shadow-sm`} onClick={() => handleEdit(index)}>
+                                                    <td className=" break-words whitespace-normal overflow-hidden text-ellipsis">
+                                                        <span className=" block">{transaction.title}</span>
                                                         <span className="block text-[12px]">{transaction.dateTime}</span>
                                                     </td>
                                                     <td className="px-2 py-2 text-center text-green-800 ">
@@ -237,7 +229,9 @@ function Cashbook() {
                                                     <td className="px-2 py-2 text-center text-red-600">
                                                         {transaction.type === 'cashOut' ? `-${transaction.amount}` : ''}
                                                     </td>
+                                                    
                                                 </tr>
+                                                 
                                             ))}
                                         </tbody>
                                     </table>
