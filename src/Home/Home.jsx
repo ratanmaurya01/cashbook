@@ -270,12 +270,11 @@ function Home() {
           </div>
         </div>
       </div>
-      
+
       <ToastContainer
         autoClose={3000}
         position="top-right"
       />
-
     </>
   );
 }
