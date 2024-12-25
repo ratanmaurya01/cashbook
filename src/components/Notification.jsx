@@ -49,11 +49,9 @@ const NotificationButton = () => {
             setNotificationScheduled(true); // Set the state that the notification was triggered
         }, timeInMillis);
     };
-
-    // Handle the reminder setting (set to 60 seconds)
     const handleSetReminder = () => {
         console.log('Reminder button clicked');
-        const timeInMillis = 60 * 1000; // 1 minute = 60,000 milliseconds
+        const timeInMillis = 60 * 1000;
         scheduleReminder(timeInMillis, 'Reminder: Time is up!', {
             body: 'Your 1-minute timer is up!',
         });
@@ -61,7 +59,7 @@ const NotificationButton = () => {
 
     return (
         <div>
-            {/* Request permission if not granted or denied */}
+          
             {!hasPermission && !permissionDenied ? (
                 <div>
                     <button
@@ -74,12 +72,6 @@ const NotificationButton = () => {
             ) : permissionDenied ? (
                 <div>
                     <p>Notifications permission has been denied. You can enable it manually in your browser settings.</p>
-                    {/* <p>
-                        For Chrome, go to: <strong>Settings > Privacy and security > Site settings > Notifications</strong>
-                    </p>
-                    <p>
-                        For Edge, go to: <strong>Settings > Cookies and site permissions > Notifications</strong>
-                    </p> */}
                 </div>
             ) : (
                 <div>

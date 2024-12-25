@@ -12,21 +12,20 @@ export default function Navbar() {
     setIsOpen(false);
   };
 
+
+  
   return (
     <>
       <nav className="bg-blue-600 text-white relative shadow-md rounded-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            {/* Logo */}
             <NavLink
               to="/"
               className="text-2xl font-bold"
-              onClick={closeMenu} // Close menu when the logo is clicked
+              onClick={closeMenu} 
             >
               My Logo
             </NavLink>
-
-            {/* Hamburger Menu (for Mobile) */}
             <div className="flex md:hidden">
               <button
                 onClick={toggleMenu}
@@ -57,12 +56,9 @@ export default function Navbar() {
                 </svg>
               </button>
             </div>
-
-            {/* Menu */}
             <div
               className={`${isOpen ? 'flex' : 'hidden'} flex-col md:flex md:flex-row md:space-x-4 absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-blue-600 md:bg-transparent z-30`}
             >
-              {/* Search Input */}
               <div className="relative md:block">
                 <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                   <svg
@@ -89,26 +85,24 @@ export default function Navbar() {
                   placeholder="Search..."
                 />
               </div>
-
-              {/* Menu Links */}
               <NavLink
                 to="/todo"
                 className="block py-2 px-4 rounded-md hover:bg-blue-500"
-                onClick={closeMenu} // Close menu on link click
+                onClick={closeMenu} 
               >
                 Todo List 
               </NavLink>
               <NavLink
                 to="/activityTracker"
                 className="block py-2 px-4 rounded-md hover:bg-blue-500"
-                onClick={closeMenu} // Close menu on link click
+                onClick={closeMenu} 
               >
                 ActivityTracker
               </NavLink>
               <NavLink
                 to="/contact"
                 className="block py-2 px-4 rounded-md hover:bg-blue-500"
-                onClick={closeMenu} // Close menu on link click
+                onClick={closeMenu}
               >
                 Contact
               </NavLink>

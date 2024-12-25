@@ -72,9 +72,6 @@ function Todo() {
 
     return (
 
-
-
-
         <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -128,48 +125,7 @@ function Todo() {
                     </div>
 
                     <div className="overflow-x-auto whitespace-nowrap mt-5 mb-5">
-{/* 
-                        <div className='mb-3 text-center'>
-                            <span class=" bg-pink-100 text-pink-800  text-xs font-medium me-2
-                     px-2.5 py-0.5 rounded dark:bg-blue-900
-                      dark:text-blue-300">Change Theme</span>
-                        </div> */}
-
-{/* 
-                        <div className="flex justify-around gap-3">
-                            <span
-                                onClick={() => handleColorClick('bg-blue-600')}
-                                className="flex w-10 h-10 bg-blue-600 rounded-full cursor-pointer"
-                            ></span>
-                            <span
-                                onClick={() => handleColorClick('bg-green-500')}
-                                className="flex w-10 h-10 bg-green-500 rounded-full cursor-pointer"
-                            ></span>
-                            <span
-                                onClick={() => handleColorClick('bg-red-500')}
-                                className="flex w-10 h-10 bg-red-500 rounded-full cursor-pointer"
-                            ></span>
-                            <span
-                                onClick={() => handleColorClick('bg-purple-500')}
-                                className="flex w-10 h-10 bg-purple-500 rounded-full cursor-pointer"
-                            ></span>
-                            <span
-                                onClick={() => handleColorClick('bg-indigo-500')}
-                                className="flex w-10 h-10 bg-indigo-500 rounded-full cursor-pointer"
-                            ></span>
-                            <span
-                                onClick={() => handleColorClick('bg-pink-300')}
-                                className="flex w-10 h-10 bg-pink-200 rounded-full cursor-pointer"
-                            ></span>
-                            <span
-                                onClick={() => handleColorClick('bg-teal-500')}
-                                className="flex w-10 h-10 bg-teal-500 rounded-full cursor-pointer"
-                            ></span>
-                        </div> */}
                     </div>
-
-                    {/* Display stored data */}
-
                     <div className="overflow-x-auto w-full shadow-sm rounded-lg p-1">
                         {formData.length > 0 && (
                             <div className="max-h-[300px] overflow-y-auto">
@@ -181,20 +137,17 @@ function Todo() {
                                         >
                                             <p className={`mb-3 mr-28 font-semibold ${textColor}`}>{item.title}</p>
                                             <p className={`mb-2 text-gray-600 ${textColor}`}>{item.description}</p>
-
-                                            {/* Edit and Delete Icons */}
                                             <div className="absolute top-2 right-2 flex space-x-2">
                                                 <button
-                                                    onClick={() => handleEdit(index)}  // Implement the edit functionality
+                                                    onClick={() => handleEdit(index)} 
                                                     className={` flex justify-center items-center bg-blue-500 rounded-full p-2 shadow-lg ${textColor}`}  // Add background color and rounded shape
                                                 >
                                                     <PencilIcon className={`h-5 w-5 ${textColor}`} />
                                                 </button>
 
                                                 <button
-                                                    onClick={() => handleDelete(index)}  // Implement the delete functionality
+                                                    onClick={() => handleDelete(index)}
                                                     className={`flex justify-center items-center bg-blue-500 rounded-full p-2 shadow-lg ${textColor}`}  // Add background color and rounded shape
-
                                                 >
                                                     <TrashIcon className={`h-5 w-5 shadow-lg rounded-lg  ${textColor}`} />
                                                 </button>
@@ -205,9 +158,6 @@ function Todo() {
                             </div>
                         )}
                     </div>
-
-
-
                 </div>
             </div>
 

@@ -212,17 +212,13 @@ function Home() {
           </div>
 
           <div className="mt-2">
-
-            {/* <h2 className="text-xl font-semibold">{category === 'cashIn' ? 'Cash In Transactions' : 'Cash Out Transactions'}</h2>
-            */}
-
             <div className="mt-2">
               {category === 'cashIn' ? (
                 <div>
                   <div className="text-lg mb-2">
                     Total Cash In: ₹{getTotalAmount(cashInTransactions)}
                   </div>
-                 
+
                   <ul className="space-y-4 justify-evenly">
                     {cashInTransactions.map((transaction, index) => (
                       <li key={index} className="flex justify-between p-2 border border-gray-200 shadow-lg rounded-lg">
@@ -238,7 +234,6 @@ function Home() {
                        mt-2 rounded cursor-pointer" />}
                         </div>
                         <div className="font-bold">₹{transaction.amount.toFixed(2)}</div>
-
                       </li>
                     ))}
                   </ul>
@@ -246,7 +241,6 @@ function Home() {
                 </div>
               ) : (
                 <div>
-
                   <div className="text-lg mb-2">
                     Total Cash Out: ₹{getTotalAmount(cashOutTransactions)}
                   </div>
@@ -266,20 +260,17 @@ function Home() {
                             className="w-16 h-16 object-cover 
                       mt-2 rounded cursor-pointer" />}
                         </div>
-
                         <div className="font-bold">₹{transaction.amount.toFixed(2)}</div>
-
                       </li>
                     ))}
                   </ul>
-
                 </div>
               )}
             </div>
           </div>
         </div>
       </div>
-
+      
       <ToastContainer
         autoClose={3000}
         position="top-right"

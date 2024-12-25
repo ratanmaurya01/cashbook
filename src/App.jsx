@@ -11,15 +11,12 @@ function App() {
   return (
     <>
       <Navbar />
-
       <Routes>
         <Route path="/" element={<Cashbook />} />
         <Route path="/home" element={<Mainpage/>} />
         <Route path="/service" element={<Service />} />
         <Route path="/todo" element={<Todo />} />
         <Route path="/activityTracker" element={<ActivityTracker />} />
-
-
       </Routes>
 
     </>

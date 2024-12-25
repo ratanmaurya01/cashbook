@@ -547,7 +547,6 @@ function Cashbook() {
 
 
             {/* Show Graph Section ✔✔ */}
-
             {showGraphModal && (
                 <div className="fixed inset-0 p-4  bg-black bg-opacity-50 flex items-center justify-center z-50">
                     <div className="relative bg-white p-2 w-full max-w-4xl rounded-lg ">
@@ -559,32 +558,9 @@ function Cashbook() {
                             &times;
                         </button>
 
-
-                        {/* PDF WITH TOOLTIPS  */}
-                        {/* 
-                        <div className="relative inline-block">
-                            <button
-                                type="button"
-                                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                onMouseEnter={handleMouseEnter}
-                                onMouseLeave={handleMouseLeave}
-                            >
-                                <FontAwesomeIcon icon={faFilePdf} className="mr-2" /> PDF
-                            </button>
-                            {showTooltip && (
-                                <div
-                                    className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 p-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm"
-                                    style={{ whiteSpace: 'nowrap' }}
-                                >
-                                    Download PDF
-                                </div>
-                            )}
-                        </div> */}
-
-                        
                         {/* Dashboard Card */}
                         <div className="mt-5 w-full bg-white  p-4 md:p-6">
-                            {/* Cash In and Cash Out Stats */}
+
                             <div className="grid grid-cols-2 gap-4 py-3 px-5 rounded-lg shadow">
                                 <dl>
                                     <dt className="text-base font-normal text-gray-500 dark:text-gray-400 pb-1">
@@ -653,8 +629,6 @@ function Cashbook() {
                                     </div>
                                 </div>
                             </div>
-
-
                             {/* Chart */}
                             <div className="bg-white rounded-lg shadow-md w-full max-h-[400px] md:max-h-[500px]">
                                 <ApexCharts
