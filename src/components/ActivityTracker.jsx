@@ -34,7 +34,7 @@ const ActivityTracker = () => {
       },
     ],
   };
-
+  
   return (
     <div>
       <motion.div
