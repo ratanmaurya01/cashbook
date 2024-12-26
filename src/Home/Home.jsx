@@ -149,11 +149,9 @@ function Home() {
 
           <div className="mt-4">
 
-            {/* <h2 className="text-xl font-semibold">{category === 'cashIn' ? 'Add Cash In' : 'Add Cash Out'}</h2>
-             */}
 
             <div className="mt-2">
-              {/* Title Field */}
+         
               <div className="mb-4">
                 <label htmlFor="title" className="text-left block mb-2 font-medium text-gray-700">Title</label>
                 <input
@@ -167,7 +165,6 @@ function Home() {
                 {titleError && <p className="mt-2 text-left text-sm text-red-600"><span className="font-medium">Oh, snapp!</span> {titleError}</p>}
               </div>
 
-              {/* Amount Field */}
               <div className="mb-4">
                 <label htmlFor="amount" className="text-left block mb-2 font-medium text-gray-700">Amount</label>
                 <input
@@ -180,8 +177,6 @@ function Home() {
                 />
                 {amountError && <p className="mt-2 text-left text-sm text-red-600"><span className="font-medium">Oh, snapp!</span> {amountError}</p>}
               </div>
-
-              {/* File Upload (Image) Field */}
               <div className="mb-4">
                 <label className="text-left block mb-2 text-sm font-medium text-gray-900" htmlFor="file_input">
                   Upload file
