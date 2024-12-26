@@ -345,9 +345,7 @@ function Cashbook() {
         },
         fill: { opacity: 1 },
         legend: { position: "bottom" },
-    });
-
-
+    })
 
     const handleRangeChange = (range) => {
         setSelectedRange(range);
@@ -404,16 +402,12 @@ function Cashbook() {
 
                         <motion.span whileHover={{ scale: 1.1 }}>
                             <div>
-                                <p
-                                    className="text-xs font-medium px-3 py-1 rounded-full border bg-red-400 text-white border-white cursor-pointer"
-                                    onClick={handlePrintReport}
-                                >
-                                    GRAPH
+                                <p className="text-xs font-medium px-3 py-1 rounded-full border bg-red-400 text-white border-white cursor-pointer"
+                                  onClick={handlePrintReport} >
+                                 GRAPH
                                 </p>
                             </div>
                         </motion.span>
-
-
 
                     </div>
                     <div>

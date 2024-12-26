@@ -194,9 +194,6 @@ function Home() {
                 </p>
               </div>
 
-              {/* {successMessage && !titleError && <p className="mt-2 text-sm text-green-600"><span className="font-medium mb-10">Well done!</span> {successMessage}</p>} */}
-
-              {/* Add Transaction Button */}
               <button
                 onClick={addTransaction}
                 className={`text-white p-2 rounded w-full ${category === 'cashIn' ? 'bg-blue-500' : 'bg-red-500'} shadow-2xl`}
