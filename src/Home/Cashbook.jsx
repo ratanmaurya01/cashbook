@@ -398,8 +398,6 @@ function Cashbook() {
                             </motion.span>
                         ))}
 
-
-
                         <motion.span whileHover={{ scale: 1.1 }}>
                             <div>
                                 <p className="text-xs font-medium px-3 py-1 rounded-full border bg-red-400 text-white border-white cursor-pointer"

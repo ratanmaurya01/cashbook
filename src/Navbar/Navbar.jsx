@@ -12,8 +12,6 @@ export default function Navbar() {
     setIsOpen(false);
   };
 
-
-  
   return (
     <>
       <nav className="bg-blue-600 text-white relative shadow-md rounded-sm">

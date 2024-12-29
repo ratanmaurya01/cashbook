@@ -43,6 +43,12 @@ const ActivityTracker = () => {
         transition={{ duration: 0.5 }}
         className="bg-gradient-to-br from-blue-50 to-blue-100 min-w-[300px] shadow-xl rounded-lg mx-auto p-2 w-full sm:max-w-md md:max-w-lg lg:w-1/2 xl:w-1/2 !important"
       >
+
+        <div>
+          <div>
+            
+          </div>
+        </div>
         <button onClick={recordActivity}>Record Activity</button>
         <h2>Daily Activity Tracker</h2>
         <Line data={graphData} />
