@@ -36,17 +36,17 @@ const NotificationButton = () => {
     // Show notification when it's time
     const showReminderNotification = (title, options) => {
         if (Notification.permission === 'granted') {
-            new Notification(title, options);  // Display the notification
+            new Notification(title, options); 
         } else {
             console.error('Notification permission is denied.');
         }
     };
 
-    // Schedule the reminder for 1 minute (60 seconds)
+ 
     const scheduleReminder = (timeInMillis, title, options) => {
         setTimeout(() => {
             showReminderNotification(title, options);
-            setNotificationScheduled(true); // Set the state that the notification was triggered
+            setNotificationScheduled(true); 
         }, timeInMillis);
     };
     const handleSetReminder = () => {
