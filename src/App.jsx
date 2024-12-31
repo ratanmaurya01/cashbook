@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom"; // Only import Routes and Route
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar/Navbar";
 import Service from "./Service/Service";
 import Cashbook from "./Home/Cashbook";
