@@ -397,7 +397,6 @@ function Cashbook() {
                                 {label}
                             </motion.span>
                         ))}
-
                         <motion.span whileHover={{ scale: 1.1 }}>
                             <div>
                                 <p className="text-xs font-medium px-3 py-1 rounded-full border bg-red-400 text-white border-white cursor-pointer"
@@ -406,6 +405,7 @@ function Cashbook() {
                                 </p>
                             </div>
                         </motion.span>
+
 
                     </div>
                     <div>
@@ -421,7 +421,6 @@ function Cashbook() {
                             </table>
                         </div>
                     </div>
-
 
                     <div className="overflow-x-auto w-full shadow-sm rounded-lg bg-white p-1">
                         {filterTransactions().length > 0 ? (
@@ -455,40 +454,7 @@ function Cashbook() {
                             <div className="text-center p-4 text-gray-500">No transactions available</div>
                         )}
                     </div>
-                    {/* 
-                    <div className="overflow-x-auto w-full shadow-sm rounded-lg bg-white p-1">
-                        {history.length > 0 ? (
-                            <div className=" max-h-[300px] overflow-y-auto">
-                                <div className=" flex flex-col gap-1">
-                                    {history.map((transaction, index) => (
-                                        <div
-                                            key={index}
-                                            className="flex justify-between items-center shadow-lg rounded-lg bg-white p-4 hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-                                            onClick={() => handleEdit(index)}
-                                        >
-
-                                            <div className="flex-1 text-wrap break-words">
-                                                <div className="font-medium">{transaction.title}</div>
-                                                <div className="text-xs text-gray-500">
-                                                    {formatDateTime(transaction.dateTime)}
-                                                </div>
-                                            </div>
-
-                                            <div className="flex-1 text-center text-green-600">
-                                                {transaction.type === "cashIn" ? `+₹${transaction.amount}` : ""}
-                                            </div>
-
-                                            <div className="flex-1 text-center text-red-600">
-                                                {transaction.type === "cashOut" ? `-₹${transaction.amount}` : ""}
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        ) : (
-                            <div className="text-center p-4 text-gray-500">No transactions available</div>
-                        )}
-                    </div> */}
+                  
 
                 </div>
 
